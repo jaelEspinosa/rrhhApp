@@ -32,47 +32,17 @@
       <!-- RRHH -->
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-users"></i>
+              <i [class]="menuRRHH.icon"></i>
               <p class="mx-3">
                 RRHH
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
+              <li *ngFor="let item of menuRRHH.submenu" class="nav-item">
+                <a [routerLink]="item.url" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Colectivo</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Evaluación</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Experiencia</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Procedencia</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Técnicos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Usuarios</p>
+                  <p>{{item.title}}</p>
                 </a>
               </li>
             </ul>
@@ -83,36 +53,21 @@
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cogs"></i>
+              <i [class]="menuConfig.icon"></i>
               <p class="mx-3">
                 Configuración
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
+              <li  *ngFor="let item of menuConfig.submenu" class="nav-item">
+                <a [routerLink]="item.url" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Log de accesos</p>
+                  <p>{{item.title}}</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="../../index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Log de Sistema</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Log de usuarios</p>
-                </a>
-              </li>
-
             </ul>
-
           </li>
-
           <li class="nav-item">
             <a href="" class="nav-link">
              <i class="nav-icon fa fa-user"></i>
