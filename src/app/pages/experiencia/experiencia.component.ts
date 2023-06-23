@@ -1,5 +1,6 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { ApiService } from './../../services/api.service';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 
 @Component({
@@ -10,15 +11,26 @@ import { Component } from '@angular/core';
 })
 export class ExperienciaComponent {
   public experiencia!: any[]
+  public users!:any[];
 
-  constructor(private apiService:ApiService){
-   this.apiService.getExperiencia()
-      .subscribe((data: any[]) => {
-        this.experiencia = data
-        console.log(this.experiencia)
-      })
+  constructor(public apiService:ApiService){
+   this.apiService.getExperiencia()  
+   
+     .subscribe(
+    (data: any) => {
+      // La petición se completó correctamente, procesa los datos recibidos
+      console.log(data);
+    },
+    (error: HttpErrorResponse) => {
+      // Se produjo un error en la petición HTTP
+      console.error('Error en la petición:', error.message);
+      console.error('Código de estado:', error.status);
+    }
+  );     
+     
 
   }
+ 
 
 
 
