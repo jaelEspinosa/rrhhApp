@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http'
 
 const url = 'https://app.formacionon.com/rrhhexperiencia'
 
+/* const url = 'https://jsonplaceholder.typicode.com/users' */
+
 @Injectable({
   providedIn: 'root'
 })

@@ -11,6 +11,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { MainComponent } from './main/main.component';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from "../shared/shared.module";
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from '../services/api.service';
 
 
 @NgModule({
@@ -27,7 +29,11 @@ import { SharedModule } from "../shared/shared.module";
     imports: [
         CommonModule,
         PagesRoutingModule,
-        SharedModule
+        SharedModule,
+        HttpClientModule,
+    ],
+    providers:[
+        ApiService
     ]
 })
 export class PagesModule { }

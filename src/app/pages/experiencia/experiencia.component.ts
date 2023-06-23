@@ -9,9 +9,14 @@ import { Component } from '@angular/core';
   ]
 })
 export class ExperienciaComponent {
+  public experiencia!: any[]
 
-  constructor(){
-
+  constructor(private apiService:ApiService){
+   this.apiService.getExperiencia()
+      .subscribe((data: any[]) => {
+        this.experiencia = data
+        console.log(this.experiencia)
+      })
 
   }
 
