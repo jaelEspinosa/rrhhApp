@@ -10,27 +10,28 @@ import { AfterViewInit, Component } from '@angular/core';
   ]
 })
 export class ExperienciaComponent {
-  public experiencia!: any[]
-  public users!:any[];
+  public experiencias!: any[]
+
 
   constructor(public apiService:ApiService){
-   this.apiService.getExperiencia()  
-   
+   this.apiService.getExperiencia()
+
      .subscribe(
     (data: any) => {
       // La petición se completó correctamente, procesa los datos recibidos
-      console.log(data);
+      this.experiencias = data
     },
     (error: HttpErrorResponse) => {
       // Se produjo un error en la petición HTTP
       console.error('Error en la petición:', error.message);
       console.error('Código de estado:', error.status);
     }
-  );     
-     
+  );
+
 
   }
- 
+
+
 
 
 
