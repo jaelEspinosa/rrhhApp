@@ -1,15 +1,15 @@
 <div id="animated fadeIn">
-   
-<div class="hold-transition login-page">
+
+<div class="hold-transition login-page bg-secondary">
     <div class="login-box">
         <div class="login-logo">
           <a href="../../index2.html"><b>RRHH</b>App</a>
         </div>
         <!-- /.login-logo -->
-        <div class="card">
+        <div class="card shadow shadow-lg border">
           <div class="card-body login-card-body">
             <p class="login-box-msg">Iniciar Sesion</p>
-      
+
             <form (submit)="login"
                   id="loginform"
                   id="loginform"
@@ -17,13 +17,13 @@
                   [formGroup]="loginForm"
             >
               <div [class]="campoNoValido('email') ? 'input-group mb-3 border border-danger':'input-group mb-3'">
-                <input 
-                        type="email" 
-                        class="form-control" 
+                <input
+                        type="email"
+                        class="form-control"
                         placeholder="Email"
                         formControlName="email"
                         >
-                
+
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-envelope"></span>
@@ -32,15 +32,15 @@
               </div>
               <div class="col text-danger">
                 <p *ngIf="campoNoValido('email')">* El Email es obligatorio *</p>
-             </div> 
-            
+             </div>
+
              <div [class]="campoNoValido('password') ? 'input-group mb-3 border border-danger':'input-group mb-3'">
-                <input type="password" 
-                       class="form-control" 
+                <input type="password"
+                       class="form-control"
                        placeholder="Password"
                        formControlName="password"
                        >
-                    
+
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-lock"></span>
@@ -49,12 +49,12 @@
               </div>
               <div class="col text-danger">
                 <p *ngIf="campoNoValido('password')">* El Password es obligatorio *</p>
-             </div> 
+             </div>
               <div class="row">
                 <div class="col-8">
                   <div class="icheck-primary">
-                    <input 
-                        type="checkbox" 
+                    <input
+                        type="checkbox"
                         id="remember"
                         formControlName="remember"
                         >
@@ -70,9 +70,9 @@
                 <!-- /.col -->
               </div>
             </form>
-      
-       
-      
+
+
+
            <!--  <p class="mb-1">
               <a href="forgot-password.html">I forgot my password</a>
             </p>
@@ -85,7 +85,7 @@
       </div>
 
 </div>
-     
+
     </div>
 
-    
+
