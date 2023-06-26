@@ -20,7 +20,31 @@ export class ExperienciaComponent {
      .subscribe(
     (data: any) => {
       // La petición se completó correctamente, procesa los datos recibidos
-      this.experiencias = data
+      this.experiencias = data;
+      
+      if (this.experiencias){
+
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.innerHTML = `
+          $(function () {
+            $("#example1").DataTable({
+              "responsive": true, "lengthChange": false, "autoWidth": false,
+              "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+              "paging": true,
+              "lengthChange": false,
+              "searching": false,
+              "ordering": true,
+              "info": true,
+              "autoWidth": false,
+              "responsive": true,
+            });
+          });
+        `;
+        document.body.appendChild(script);
+      }
     },
     (error: HttpErrorResponse) => {
       // Se produjo un error en la petición HTTP
@@ -31,6 +55,7 @@ export class ExperienciaComponent {
 
 
   }
+  
 
 
 
