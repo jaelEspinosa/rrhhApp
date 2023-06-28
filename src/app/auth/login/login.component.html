@@ -16,27 +16,27 @@
                   autocomplete="off"
                   [formGroup]="loginForm"
             >
-              <div [class]="campoNoValido('email') ? 'input-group mb-3 border border-danger':'input-group mb-3'">
+              <div class="input-group mb-3">
                 <input
-                        type="email"
-                        class="form-control"
-                        placeholder="Email"
-                        formControlName="email"
+                        type="username"
+                        [class]="campoNoValido('username') ? 'form-control is-invalid':'form-control'"
+                        placeholder="Nombre de usuario"
+                        formControlName="username"
                         >
 
                 <div class="input-group-append">
                   <div class="input-group-text">
-                    <span class="fas fa-envelope"></span>
+                    <span class="fas fa-user"></span>
                   </div>
                 </div>
               </div>
               <div class="col text-danger">
-                <p *ngIf="campoNoValido('email')">* El Email es obligatorio *</p>
+                <p *ngIf="campoNoValido('username')">* El Email es obligatorio *</p>
              </div>
 
-             <div [class]="campoNoValido('password') ? 'input-group mb-3 border border-danger':'input-group mb-3'">
+             <div class="input-group mb-3">
                 <input type="password"
-                       class="form-control"
+                       [class]="campoNoValido('password') ? 'form-control is-invalid':'form-control'"
                        placeholder="Password"
                        formControlName="password"
                        >
