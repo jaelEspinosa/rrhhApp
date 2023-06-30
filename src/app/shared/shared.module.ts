@@ -4,6 +4,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './foooter/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     SidebarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { RouterModule } from '@angular/router';
   exports:[
     SidebarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    BreadcrumbsComponent
   ]
 })
 export class SharedModule { }

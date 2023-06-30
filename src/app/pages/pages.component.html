@@ -1,11 +1,18 @@
 <div id="main-wrapper animated fadeIn">
   <app-header></app-header>
-    <app-sidebar></app-sidebar>
-    <div class="content-wrapper">
+  <app-sidebar></app-sidebar>
+  <div class="content-wrapper row">
+    <div class="col-12">
 
-            <!-- Mi sistema de rutas -->
-            <router-outlet ></router-outlet>
-     </div>
+      <app-breadcrumbs></app-breadcrumbs>
+    </div>
+    
+    <!-- Mi sistema de rutas -->
+    <div class="col-12">
+
+      <router-outlet ></router-outlet>
+    </div>
+  </div>
 
              <app-footer></app-footer>
 
